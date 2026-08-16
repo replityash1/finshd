@@ -1,0 +1,17 @@
+{
+  "name": "Syllabus Tracker",
+  "short_name": "SyllTrack",
+  "description": "Track your Rajasthan state exam syllabus progress — RAS Pre, RPSC 2nd Grade",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0a0b10",
+  "theme_color": "#7c6df0",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
