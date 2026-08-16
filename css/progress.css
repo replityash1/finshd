@@ -1,5 +1,342 @@
 /**
- * css/progress.css — Progress (analytics) view styles
- * Pace, heatmap, per-exam bars, weak spots, notes library.
- * Built in Phase 5.
+ * css/progress.css — Progress view: pace, heatmap, breakdown, weak spots, library
+ * Five distinct sections per PRD §6 — no chart duplication.
  */
+
+/* ─── Progress Layout ────────────────────────────────────────────────────── */
+
+.progress-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-6);
+  max-width: 720px;
+}
+
+.progress-section {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--sp-4);
+}
+
+.progress-section__title {
+  font-size: var(--size-body);
+  font-weight: var(--font-heading);
+  margin-bottom: var(--sp-3);
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+}
+
+.progress-section__icon {
+  color: var(--text-secondary);
+  font-size: 16px;
+}
+
+/* ─── 1. Pace Section ────────────────────────────────────────────────────── */
+
+.pace-message {
+  font-size: var(--size-body);
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.pace-message strong {
+  color: var(--text-primary);
+  font-weight: var(--font-heading);
+}
+
+.pace-bar {
+  margin-top: var(--sp-3);
+  height: 8px;
+  background: var(--border);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.pace-bar__fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  transition: width var(--duration-slow) var(--ease-out);
+}
+
+.pace-stats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--sp-2);
+  font-size: var(--size-caption);
+  color: var(--text-secondary);
+}
+
+/* ─── 2. Streak + Activity Heatmap ───────────────────────────────────────── */
+
+.streak-header {
+  display: flex;
+  align-items: baseline;
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-4);
+}
+
+.streak-number {
+  font-size: var(--size-hero);
+  font-weight: var(--font-hero);
+  line-height: 1;
+}
+
+.streak-label {
+  font-size: var(--size-body);
+  color: var(--text-secondary);
+}
+
+.heatmap {
+  display: flex;
+  gap: 3px;
+  overflow-x: auto;
+  padding-bottom: var(--sp-2);
+  scrollbar-width: thin;
+}
+
+.heatmap-week {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.heatmap-cell {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  background: var(--border);
+  transition: background var(--duration-fast) var(--ease-out);
+}
+
+.heatmap-cell--l1 { background: rgba(124, 109, 240, 0.2); }
+.heatmap-cell--l2 { background: rgba(124, 109, 240, 0.4); }
+.heatmap-cell--l3 { background: rgba(124, 109, 240, 0.6); }
+.heatmap-cell--l4 { background: rgba(124, 109, 240, 0.85); }
+
+[data-theme="light"] .heatmap-cell--l1 { background: rgba(108, 92, 231, 0.15); }
+[data-theme="light"] .heatmap-cell--l2 { background: rgba(108, 92, 231, 0.3); }
+[data-theme="light"] .heatmap-cell--l3 { background: rgba(108, 92, 231, 0.5); }
+[data-theme="light"] .heatmap-cell--l4 { background: rgba(108, 92, 231, 0.75); }
+
+.heatmap-legend {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  margin-top: var(--sp-2);
+  font-size: 10px;
+  color: var(--text-secondary);
+}
+
+.heatmap-legend__cells {
+  display: flex;
+  gap: 2px;
+}
+
+/* ─── 3. Per-Exam Breakdown ──────────────────────────────────────────────── */
+
+.breakdown-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+.breakdown-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+}
+
+.breakdown-item__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-2);
+}
+
+.breakdown-item__name {
+  font-size: var(--size-body);
+  font-weight: var(--font-heading);
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+}
+
+.breakdown-item__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.breakdown-item__pct {
+  font-size: var(--size-caption);
+  color: var(--text-secondary);
+  flex-shrink: 0;
+}
+
+.breakdown-bar {
+  height: 6px;
+  background: var(--border);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.breakdown-bar__fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  transition: width var(--duration-slow) var(--ease-out);
+}
+
+.breakdown-item__meta {
+  font-size: var(--size-caption);
+  color: var(--text-secondary);
+}
+
+/* ─── 4. Weak Spots ──────────────────────────────────────────────────────── */
+
+.weak-spots-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+.weak-spot {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  padding: var(--sp-2) 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.weak-spot:last-child {
+  border-bottom: none;
+}
+
+.weak-spot__rank {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--bg-active);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: var(--font-heading);
+  color: var(--text-secondary);
+}
+
+.weak-spot__info {
+  flex: 1;
+  min-width: 0;
+}
+
+.weak-spot__title {
+  font-size: var(--size-body);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.weak-spot__meta {
+  font-size: var(--size-caption);
+  color: var(--text-secondary);
+  margin-top: 1px;
+}
+
+.weak-spot__pct {
+  flex-shrink: 0;
+  font-size: var(--size-body);
+  font-weight: var(--font-heading);
+  color: var(--danger);
+}
+
+/* ─── 5. Notes & Bookmarks Library ───────────────────────────────────────── */
+
+.library-tabs {
+  display: flex;
+  gap: var(--sp-1);
+  margin-bottom: var(--sp-3);
+  border-bottom: 1px solid var(--border);
+}
+
+.library-tab {
+  padding: var(--sp-2) var(--sp-3);
+  font-size: var(--size-caption);
+  font-weight: var(--font-heading);
+  color: var(--text-secondary);
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  transition: all var(--duration-fast) var(--ease-out);
+  cursor: pointer;
+}
+
+.library-tab--active {
+  color: var(--text-primary);
+  border-bottom-color: var(--accent-ras);
+}
+
+.library-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+.library-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-3);
+  padding: var(--sp-3);
+  background: var(--bg-base);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: border-color var(--duration-fast) var(--ease-out);
+}
+
+.library-item:hover {
+  border-color: var(--text-secondary);
+}
+
+.library-item__icon {
+  flex-shrink: 0;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
+.library-item__info {
+  flex: 1;
+  min-width: 0;
+}
+
+.library-item__title {
+  font-size: var(--size-body);
+  font-weight: var(--font-heading);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.library-item__preview {
+  font-size: var(--size-caption);
+  color: var(--text-secondary);
+  margin-top: 2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.library-item__meta {
+  font-size: 11px;
+  color: var(--text-secondary);
+  margin-top: var(--sp-1);
+}
+
+.library-empty {
+  text-align: center;
+  padding: var(--sp-6);
+  color: var(--text-secondary);
+  font-size: var(--size-body);
+}

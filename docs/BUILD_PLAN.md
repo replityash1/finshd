@@ -60,7 +60,7 @@ console) before moving on. Commit at the end of each phase with a message naming
 - Print stylesheet for the revision sheet.
 - Exam countdown + Pace integration if exam dates were provided.
 - Local reminders (Notification API) if PRD open question #4 was answered "include."
-- Full security pass against CLAUDE.md's security checklist.
+- Full security pass against .md's security checklist.
 - Full responsive pass at 360px, 768px, 1024px+ widths.
 - Performance pass: verify initial paint doesn't block on rendering the full expanded tree,
   check bundle/asset sizes are reasonable for a 3G-ish connection.
