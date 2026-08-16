@@ -270,6 +270,13 @@ function _initKeyboardShortcuts() {
         closeAuthModal();
         return;
       }
+
+      // Close settings modal if open
+      var settingsOverlay = $('settings-overlay');
+      if (settingsOverlay && !settingsOverlay.hidden) {
+        if (typeof closeSettings === 'function') closeSettings();
+        return;
+      }
     }
 
     // Number keys 1-3 to switch views (desktop convenience)
@@ -314,6 +321,20 @@ function initNav() {
   if (searchMobile) {
     searchMobile.addEventListener('click', function() {
       if (typeof openCommandPalette === 'function') openCommandPalette();
+    });
+  }
+
+  // Settings triggers
+  var settingsDesktop = $('nav-settings-desktop');
+  var settingsBar = $('nav-settings-bar');
+  if (settingsDesktop) {
+    settingsDesktop.addEventListener('click', function() {
+      if (typeof openSettings === 'function') openSettings();
+    });
+  }
+  if (settingsBar) {
+    settingsBar.addEventListener('click', function() {
+      if (typeof openSettings === 'function') openSettings();
     });
   }
 
