@@ -1,4 +1,264 @@
 /**
- * css/components.css — Shared components: modals, toasts, buttons, study hub
- * Built incrementally across phases 2–7.
+ * css/components.css — Shared components: modals, toasts, buttons
+ * Built incrementally across phases.
  */
+
+/* ─── Buttons ────────────────────────────────────────────────────────────── */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-2);
+  padding: var(--sp-2) var(--sp-4);
+  border-radius: var(--radius-sm);
+  font-size: var(--size-body);
+  font-weight: var(--font-heading);
+  line-height: 1.3;
+  min-height: var(--touch-target);
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-out);
+  border: 1px solid transparent;
+}
+
+.btn--primary {
+  background: var(--accent-ras);
+  color: #ffffff;
+  border-color: var(--accent-ras);
+}
+
+.btn--primary:hover {
+  filter: brightness(1.1);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--text-secondary);
+  border-color: var(--border);
+}
+
+.btn--ghost:hover {
+  color: var(--text-primary);
+  background: var(--bg-hover);
+}
+
+.btn--google {
+  background: var(--bg-elevated);
+  color: var(--text-primary);
+  border-color: var(--border);
+  gap: var(--sp-3);
+}
+
+.btn--google:hover {
+  background: var(--bg-hover);
+}
+
+.btn--small {
+  padding: var(--sp-1) var(--sp-3);
+  font-size: var(--size-caption);
+  min-height: 32px;
+}
+
+.btn--danger {
+  background: transparent;
+  color: var(--danger);
+  border-color: var(--danger);
+}
+
+.btn--danger:hover {
+  background: var(--danger);
+  color: #ffffff;
+}
+
+/* ─── Toast ──────────────────────────────────────────────────────────────── */
+
+.toast {
+  position: fixed;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  padding: var(--sp-3) var(--sp-4);
+  border-radius: var(--radius-md);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-elevated);
+  color: var(--text-primary);
+  font-size: var(--size-body);
+  max-width: 420px;
+  min-width: 280px;
+
+  /* Desktop: bottom-right corner */
+  bottom: var(--sp-6);
+  right: var(--sp-6);
+
+  /* Animate in */
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity var(--duration-norm) var(--ease-out),
+              transform var(--duration-norm) var(--ease-out);
+}
+
+/* Mobile: bottom-center, above bottom nav */
+@media (max-width: 767px) {
+  .toast {
+    left: var(--sp-4);
+    right: var(--sp-4);
+    bottom: calc(var(--nav-height-mobile) + var(--sp-4));
+    max-width: none;
+  }
+}
+
+.toast--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.toast--exiting {
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+/* Toast accent bar for types */
+.toast--success {
+  border-left: 3px solid var(--success);
+}
+
+.toast--danger {
+  border-left: 3px solid var(--danger);
+}
+
+.toast--warning {
+  border-left: 3px solid var(--warning);
+}
+
+.toast--info {
+  border-left: 3px solid var(--accent-ras);
+}
+
+.toast__message {
+  flex: 1;
+  line-height: 1.4;
+}
+
+.toast__undo {
+  font-size: var(--size-caption);
+  font-weight: var(--font-heading);
+  color: var(--accent-ras);
+  padding: var(--sp-1) var(--sp-2);
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  transition: background var(--duration-fast) var(--ease-out);
+}
+
+.toast__undo:hover {
+  background: var(--bg-hover);
+}
+
+.toast__close {
+  font-size: 18px;
+  color: var(--text-secondary);
+  padding: var(--sp-1);
+  line-height: 1;
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+.toast__close:hover {
+  color: var(--text-primary);
+}
+
+/* ─── Modal ──────────────────────────────────────────────────────────────── */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-overlay);
+  padding: var(--sp-4);
+  animation: overlay-fadein var(--duration-norm) var(--ease-out);
+}
+
+.modal-overlay[hidden] {
+  display: none;
+}
+
+@keyframes overlay-fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.modal {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-elevated);
+  width: 100%;
+  max-width: 400px;
+  animation: modal-scalein var(--duration-norm) var(--ease-spring);
+}
+
+@keyframes modal-scalein {
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--sp-4) var(--sp-4) var(--sp-2);
+}
+
+.modal__close {
+  font-size: 22px;
+  color: var(--text-secondary);
+  padding: var(--sp-1);
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+.modal__close:hover {
+  color: var(--text-primary);
+}
+
+.modal__body {
+  padding: var(--sp-2) var(--sp-4);
+}
+
+.modal__footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: var(--sp-2) var(--sp-4) var(--sp-4);
+}
+
+/* ─── Command Palette Overlay ────────────────────────────────────────────── */
+
+.cmd-palette-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 600;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 20vh;
+  background: var(--bg-overlay);
+  animation: overlay-fadein var(--duration-fast) var(--ease-out);
+}
+
+.cmd-palette-overlay[hidden] {
+  display: none;
+}
+
+.cmd-palette {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-elevated);
+  width: 100%;
+  max-width: 560px;
+  max-height: 400px;
+  overflow: hidden;
+  animation: modal-scalein var(--duration-fast) var(--ease-spring);
+}
