@@ -1,0 +1,328 @@
+/**
+ * css/base.css — Design tokens, reset, typography
+ *
+ * Implements the "Midnight Campus" palette from DESIGN_SYSTEM.md §2.
+ * Every component-level color resolves through a token — no hardcoded hex
+ * in component CSS files.
+ */
+
+/* ─── Google Fonts ─── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+/* ─── Design Tokens — Dark Theme (default) ─── */
+:root {
+  /* Backgrounds */
+  --bg:             #0a0b10;
+  --bg-elevated:    #10121a;
+
+  /* Borders & dividers */
+  --border:         #1e2130;
+
+  /* Text */
+  --text-primary:   #e4e3ef;
+  --text-secondary: #9896ab;
+
+  /* Exam accent colors */
+  --accent-ras:     #7c6df0;    /* RAS Pre — soft violet */
+  --accent-2g-p1:   #2ed8a3;    /* 2nd Grade Paper I — seafoam */
+  --accent-2g-p2:   #e17055;    /* 2nd Grade Paper II Science — terracotta */
+
+  /* Semantic colors */
+  --success:        #2ed8a3;
+  --danger:         #ff6b6b;
+  --warning:        #f4b350;    /* muted amber, used sparingly */
+
+  /* Derived / component tokens */
+  --bg-hover:       #161824;
+  --bg-active:      #1c1e2e;
+  --bg-overlay:     rgba(10, 11, 16, 0.85);
+  --border-focus:   var(--accent-ras);
+  --shadow-elevated: 0 4px 24px rgba(0, 0, 0, 0.35);
+  --shadow-subtle:  0 1px 4px rgba(0, 0, 0, 0.2);
+
+  /* Spacing — 4px base unit */
+  --sp-1:  4px;
+  --sp-2:  8px;
+  --sp-3:  12px;
+  --sp-4:  16px;
+  --sp-6:  24px;
+  --sp-8:  32px;
+  --sp-10: 40px;
+  --sp-12: 48px;
+
+  /* Border radius */
+  --radius-sm:  8px;
+  --radius-md:  12px;
+  --radius-lg:  16px;
+  --radius-full: 9999px;
+
+  /* Typography */
+  --font-family:    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-hero:      800;
+  --font-heading:   600;
+  --font-body:      400;
+
+  --size-hero:      40px;
+  --size-hero-sm:   32px;
+  --size-title:     13px;
+  --size-card-title:16px;
+  --size-body:      14px;
+  --size-caption:   12px;
+
+  --lh-hero:        1.1;
+  --lh-body:        1.65;
+  --lh-title:       1.3;
+
+  --ls-hero:        -0.02em;
+  --ls-title:       0.06em;
+
+  /* Motion — state confirmations only, never decorative or blocking */
+  --duration-fast:  150ms;
+  --duration-norm:  200ms;
+  --duration-slow:  250ms;
+  --ease-out:       cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-spring:    cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* Layout */
+  --nav-width:       72px;
+  --nav-width-expanded: 220px;
+  --content-max-width:  1080px;
+  --touch-target:    40px;
+  --nav-height-mobile: 60px;
+}
+
+/* ─── Light Theme ─── */
+[data-theme="light"] {
+  --bg:             #f8f7f4;
+  --bg-elevated:    #ffffff;
+  --border:         #e8e6e1;
+  --text-primary:   #1a1a2e;
+  --text-secondary: #6b6985;
+
+  --accent-ras:     #6c5ce7;
+  --accent-2g-p1:   #00b894;
+  --accent-2g-p2:   #d35400;
+
+  --success:        #00b894;
+  --danger:         #e74c3c;
+  --warning:        #e0a030;
+
+  --bg-hover:       #f0efe9;
+  --bg-active:      #e8e7e0;
+  --bg-overlay:     rgba(248, 247, 244, 0.9);
+  --border-focus:   var(--accent-ras);
+  --shadow-elevated: 0 4px 24px rgba(0, 0, 0, 0.08);
+  --shadow-subtle:  0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+/* ─── CSS Reset ─── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--size-body);
+  font-weight: var(--font-body);
+  line-height: var(--lh-body);
+  color: var(--text-primary);
+  background-color: var(--bg);
+  min-height: 100dvh;
+  overflow-x: hidden;
+  transition: background-color var(--duration-norm) var(--ease-out),
+              color var(--duration-norm) var(--ease-out);
+}
+
+/* ─── Typography ─── */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var(--font-heading);
+  line-height: var(--lh-title);
+}
+
+/* Section titles — uppercase, tracked out */
+.title-section {
+  font-size: var(--size-title);
+  font-weight: var(--font-heading);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-title);
+  color: var(--text-secondary);
+}
+
+/* Card titles */
+.title-card {
+  font-size: var(--size-card-title);
+  font-weight: var(--font-heading);
+}
+
+/* Hero numerals for stats */
+.stat-hero {
+  font-size: var(--size-hero);
+  font-weight: var(--font-hero);
+  letter-spacing: var(--ls-hero);
+  line-height: var(--lh-hero);
+}
+
+.stat-hero-sm {
+  font-size: var(--size-hero-sm);
+  font-weight: var(--font-hero);
+  letter-spacing: var(--ls-hero);
+  line-height: var(--lh-hero);
+}
+
+/* Caption / metadata text */
+.text-secondary {
+  font-size: var(--size-caption);
+  color: var(--text-secondary);
+}
+
+/* ─── Links ─── */
+a {
+  color: var(--accent-ras);
+  text-decoration: none;
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ─── Buttons — base reset for interactive elements ─── */
+button {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  line-height: inherit;
+}
+
+/* Ensure all interactive elements are keyboard-reachable with visible focus */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 2px;
+}
+
+/* ─── Lists ─── */
+ul, ol {
+  list-style: none;
+}
+
+/* ─── Images ─── */
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* ─── Scrollbar styling (subtle, respects theme) ─── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--border);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--text-secondary);
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+
+/* ─── Selection ─── */
+::selection {
+  background-color: var(--accent-ras);
+  color: #ffffff;
+}
+
+/* ─── Utility Classes ─── */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Hide on mobile / desktop */
+@media (max-width: 767px) {
+  .desktop-only { display: none !important; }
+}
+@media (min-width: 768px) {
+  .mobile-only { display: none !important; }
+}
+
+/* ─── App Layout Shell ─── */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+/* Desktop: side rail + content */
+@media (min-width: 768px) {
+  .app-container {
+    flex-direction: row;
+  }
+}
+
+.main-content {
+  flex: 1;
+  width: 100%;
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: var(--sp-4);
+  /* Bottom padding for mobile nav */
+  padding-bottom: calc(var(--nav-height-mobile) + var(--sp-4));
+}
+
+@media (min-width: 768px) {
+  .main-content {
+    padding: var(--sp-6);
+    padding-bottom: var(--sp-6);
+    margin-left: var(--nav-width);
+  }
+}
+
+/* ─── Reduced Motion ─── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

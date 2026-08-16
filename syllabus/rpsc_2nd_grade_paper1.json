@@ -1,143 +1,82 @@
 {
   "exam": "RPSC Senior Teacher (2nd Grade) Paper-I",
+  "examId": "rpsc_2nd_grade_paper1",
   "subjects": [
     {
       "id": "rajasthan_geo_history_cultural_gk",
       "title_hi": "राजस्थान का भौगोलिक, ऐतिहासिक, सांस्कृतिक एवं सामान्य ज्ञान",
       "title_en": "Geographical, Historical, Cultural and General Knowledge of Rajasthan",
-      "completed": false,
-      "progress": 0,
       "topics": [
         {
           "id": "physical_features_climate_drainage_demography_rajasthan",
           "title_hi": "भौतिक स्वरूप, जलवायु, अपवाह, प्राकृतिक वनस्पति, कृषि, पशुधन, डेयरी विकास, जनांकिकीय विशेषताएं, जनजातियाँ, उद्योग, पर्यटन एवं प्रमुख पर्यटन केंद्र",
           "title_en": "Physical features, Climate, Drainage, Natural Vegetation, Agriculture, livestock, Dairy development, Demographic Characteristics, Tribes, Industries, Tourism and major tourist centres",
-          "completed": false,
-          "revision": false,
-          "bookmarked": false,
-          "notes": "",
-          "progress": 0,
           "children": [
             {
               "id": "physical_features_rajasthan_2g",
               "title_hi": "भौतिक स्वरूप",
               "title_en": "Physical features",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             },
             {
               "id": "climate_rajasthan_2g",
               "title_hi": "जलवायु",
               "title_en": "Climate",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             },
             {
               "id": "drainage_rajasthan_2g",
               "title_hi": "अपवाह",
               "title_en": "Drainage",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             },
             {
               "id": "natural_vegetation_rajasthan_2g",
               "title_hi": "प्राकृतिक वनस्पति",
               "title_en": "Natural Vegetation",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             },
             {
               "id": "agriculture_rajasthan_2g",
               "title_hi": "कृषि",
               "title_en": "Agriculture",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             },
             {
               "id": "livestock_rajasthan_2g",
               "title_hi": "पशुधन",
               "title_en": "Livestock",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             },
             {
               "id": "dairy_development_rajasthan_2g",
               "title_hi": "डेयरी विकास",
               "title_en": "Dairy development",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             },
             {
               "id": "demographic_characteristics_rajasthan_2g",
               "title_hi": "जनांकिकीय विशेषताएं",
               "title_en": "Demographic Characteristics",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             },
             {
               "id": "tribes_rajasthan_2g",
               "title_hi": "जनजातियाँ",
               "title_en": "Tribes",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             },
             {
               "id": "industries_rajasthan_2g",
               "title_hi": "उद्योग",
               "title_en": "Industries",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             },
             {
               "id": "tourism_major_centres_rajasthan_2g",
               "title_hi": "पर्यटन और प्रमुख पर्यटन केंद्र",
               "title_en": "Tourism and major tourist centres",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             }
           ]
         },
@@ -145,55 +84,30 @@
           "id": "ancient_culture_civilization_rajasthan_2g",
           "title_hi": "राजस्थान की प्राचीन संस्कृति एवं सभ्यता (स्थल एवं उनका महत्व)",
           "title_en": "Ancient Culture & Civilization of Rajasthan (Sites and their importance)",
-          "completed": false,
-          "revision": false,
-          "bookmarked": false,
-          "notes": "",
-          "progress": 0,
           "children": []
         },
         {
           "id": "history_rajasthan_upto_18th_century",
           "title_hi": "राजस्थान का इतिहास 18वीं शताब्दी तक",
           "title_en": "History of Rajasthan upto 18th Century",
-          "completed": false,
-          "revision": false,
-          "bookmarked": false,
-          "notes": "",
-          "progress": 0,
           "children": [
             {
               "id": "rajput_dynasties_rajasthan_2g",
               "title_hi": "राजस्थान के राजपूत राजवंश",
               "title_en": "Rajput dynasties of Rajasthan",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             },
             {
               "id": "relations_delhi_sultanate_2g",
               "title_hi": "दिल्ली सल्तनत के साथ संबंध – मेवाड़, रणथंभौर और जालौर",
               "title_en": "Relations with Delhi Sultanate – Mewar, Ranthambore and Jalore",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             },
             {
               "id": "rajasthan_and_mughals_2g",
               "title_hi": "राजस्थान और मुगल – मेवाड़, मारवाड़, आमेर और बीकानेर (सांगा, प्रताप, आमेर के मानसिंह, चंद्रसेन, बीकानेर के राय सिंह, मेवाड़ के राज सिंह के विशेष संदर्भ में)",
               "title_en": "Rajasthan and Mughals – Mewar, Marwar, Amer and Bikaner (With special reference to Sanga, Pratap, Mansingh of Amer, Chandrasen, Rai Singh of Bikaner, Raj Singh of Mewar)",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             }
           ]
         },
@@ -201,55 +115,30 @@
           "id": "history_freedom_struggle_rajasthan_2g",
           "title_hi": "राजस्थान में स्वतंत्रता संग्राम का इतिहास",
           "title_en": "History of Freedom Struggle in Rajasthan",
-          "completed": false,
-          "revision": false,
-          "bookmarked": false,
-          "notes": "",
-          "progress": 0,
           "children": [
             {
               "id": "revolution_1857_2g",
               "title_hi": "1857 की क्रांति",
               "title_en": "Revolution of 1857",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             },
             {
               "id": "political_awakening_2g",
               "title_hi": "राजनीतिक जागृति",
               "title_en": "Political Awakening",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             },
             {
               "id": "prajamandal_movements_2g",
               "title_hi": "प्रजामंडल आंदोलन",
               "title_en": "Prajamandal Movements",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             },
             {
               "id": "peasants_tribal_movements_2g",
               "title_hi": "किसान एवं आदिवासी आंदोलन",
               "title_en": "Peasants and Tribal Movements",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             }
           ]
         },
@@ -257,121 +146,66 @@
           "id": "integration_of_rajasthan_2g",
           "title_hi": "राजस्थान का एकीकरण",
           "title_en": "Integration of Rajasthan",
-          "completed": false,
-          "revision": false,
-          "bookmarked": false,
-          "notes": "",
-          "progress": 0,
           "children": []
         },
         {
           "id": "society_and_religion_2g",
           "title_hi": "समाज एवं धर्म",
           "title_en": "Society and Religion",
-          "completed": false,
-          "revision": false,
-          "bookmarked": false,
-          "notes": "",
-          "progress": 0,
           "children": [
             {
               "id": "lok_devta_deviyan_2g",
               "title_hi": "लोक देवता एवं देवियां",
               "title_en": "Lok Devta and Devian",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             },
             {
               "id": "saints_of_rajasthan_2g",
               "title_hi": "राजस्थान के संत",
               "title_en": "Saints of Rajasthan",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             },
             {
               "id": "architecture_temples_forts_palaces_monuments_2g",
               "title_hi": "स्थापत्य – मंदिर, किले, महल एवं स्मारक",
               "title_en": "Architecture – Temples, Forts, Palaces and Monuments",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             },
             {
               "id": "paintings_various_schools_2g",
               "title_hi": "चित्रकला – विभिन्न शैलियाँ",
               "title_en": "Paintings – Various Schools",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             },
             {
               "id": "fairs_festivals_2g",
               "title_hi": "मेले एवं त्यौहार",
               "title_en": "Fairs and Festivals",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             },
             {
               "id": "customs_dresses_ornaments_handicrafts_2g",
               "title_hi": "रीति–रिवाज, वेशभूषा, आभूषण एवं हस्तशिल्प",
               "title_en": "Customs, Dresses, Ornaments and Handicrafts",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             },
             {
               "id": "folk_music_dance_performing_art_2g",
               "title_hi": "लोक संगीत, नृत्य एवं प्रदर्शन कला",
               "title_en": "Folk Music, Dance and performing Art",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             },
             {
               "id": "language_literature_2g",
               "title_hi": "भाषा एवं साहित्य",
               "title_en": "Language and Literature",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             },
             {
               "id": "leading_personalities_rajasthan_2g",
               "title_hi": "राजस्थान के प्रमुख व्यक्तित्व",
               "title_en": "Leading Personalities of Rajasthan",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             }
           ]
         }
@@ -381,128 +215,71 @@
       "id": "rajasthan_political_administrative_system_2g",
       "title_hi": "राजस्थान की राजनीतिक एवं प्रशासनिक व्यवस्था",
       "title_en": "Political and Administrative System of Rajasthan",
-      "completed": false,
-      "progress": 0,
       "topics": [
         {
           "id": "governor_cm_council_ministers_2g",
           "title_hi": "राज्यपाल, मुख्यमंत्री एवं मंत्रिपरिषद",
           "title_en": "Governor, Chief Minister and Council of Ministers",
-          "completed": false,
-          "revision": false,
-          "bookmarked": false,
-          "notes": "",
-          "progress": 0,
           "children": []
         },
         {
           "id": "state_legislative_assembly_2g",
           "title_hi": "राज्य विधान सभा",
           "title_en": "State Legislative Assembly",
-          "completed": false,
-          "revision": false,
-          "bookmarked": false,
-          "notes": "",
-          "progress": 0,
           "children": []
         },
         {
           "id": "high_court_subordinate_courts_2g",
           "title_hi": "राजस्थान उच्च न्यायालय एवं अधीनस्थ न्यायालय",
           "title_en": "Rajasthan High Court and Subordinate Courts",
-          "completed": false,
-          "revision": false,
-          "bookmarked": false,
-          "notes": "",
-          "progress": 0,
           "children": []
         },
         {
           "id": "panchayati_raj_system_administration_2g",
           "title_hi": "पंचायती राज व्यवस्था एवं इसका प्रशासन",
           "title_en": "Panchayati Raj System and its Administration",
-          "completed": false,
-          "revision": false,
-          "bookmarked": false,
-          "notes": "",
-          "progress": 0,
           "children": []
         },
         {
           "id": "urban_local_self_government_administration_2g",
           "title_hi": "शहरी स्थानीय स्वशासन एवं इसका प्रशासन",
           "title_en": "Urban Local Self Government and its Administration",
-          "completed": false,
-          "revision": false,
-          "bookmarked": false,
-          "notes": "",
-          "progress": 0,
           "children": []
         },
         {
           "id": "state_secretariat_divisional_commissioner_district_admin_2g",
           "title_hi": "राज्य सचिवालय, संभागीय आयुक्त, जिला प्रशासन",
           "title_en": "State Secretariat, Divisional Commissioner, District Administration",
-          "completed": false,
-          "revision": false,
-          "bookmarked": false,
-          "notes": "",
-          "progress": 0,
           "children": []
         },
         {
           "id": "state_commissions_rajasthan_2g",
           "title_hi": "राजस्थान लोक सेवा आयोग, राजस्थान राज्य महिला आयोग, राजस्थान राज्य वित्त आयोग, राजस्थान राज्य निर्वाचन आयोग",
           "title_en": "Rajasthan Public Service Commission, Rajasthan State Commission for Women, Rajasthan State Finance Commission, Rajasthan State Election Commission",
-          "completed": false,
-          "revision": false,
-          "bookmarked": false,
-          "notes": "",
-          "progress": 0,
           "children": [
             {
               "id": "rpsc_2g",
               "title_hi": "राजस्थान लोक सेवा आयोग",
               "title_en": "Rajasthan Public Service Commission",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             },
             {
               "id": "rajasthan_state_commission_for_women_2g",
               "title_hi": "राजस्थान राज्य महिला आयोग",
               "title_en": "Rajasthan State Commission for Women",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             },
             {
               "id": "rajasthan_state_finance_commission_2g",
               "title_hi": "राजस्थान राज्य वित्त आयोग",
               "title_en": "Rajasthan State Finance Commission",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             },
             {
               "id": "rajasthan_state_election_commission_2g",
               "title_hi": "राजस्थान राज्य निर्वाचन आयोग",
               "title_en": "Rajasthan State Election Commission",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             }
           ]
         },
@@ -510,33 +287,18 @@
           "id": "lokayukta_legal_services_authority_2g",
           "title_hi": "लोकायुक्त, राजस्थान राज्य विधिक सेवा प्राधिकरण",
           "title_en": "Lokayukta, Rajasthan State Legal Services Authority",
-          "completed": false,
-          "revision": false,
-          "bookmarked": false,
-          "notes": "",
-          "progress": 0,
           "children": [
             {
               "id": "lokayukta_2g",
               "title_hi": "लोकायुक्त",
               "title_en": "Lokayukta",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             },
             {
               "id": "rajasthan_state_legal_services_authority_2g",
               "title_hi": "राजस्थान राज्य विधिक सेवा प्राधिकरण",
               "title_en": "Rajasthan State Legal Services Authority",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             }
           ]
         }
@@ -546,62 +308,35 @@
       "id": "current_affairs_rajasthan_2g",
       "title_hi": "राजस्थान के समसामयिक विषय",
       "title_en": "Current Affairs of Rajasthan",
-      "completed": false,
-      "progress": 0,
       "topics": [
         {
           "id": "important_persons_places_current_issues_2g",
           "title_hi": "महत्वपूर्ण व्यक्ति, स्थान एवं समसामयिक मुद्दे",
           "title_en": "Important Persons, Places and Current Issues",
-          "completed": false,
-          "revision": false,
-          "bookmarked": false,
-          "notes": "",
-          "progress": 0,
           "children": []
         },
         {
           "id": "new_schemes_initiatives_welfare_development_2g",
           "title_hi": "कल्याण एवं विकास से संबंधित नई योजनाएं एवं पहल",
           "title_en": "New Schemes and Initiatives related to Welfare and Development",
-          "completed": false,
-          "revision": false,
-          "bookmarked": false,
-          "notes": "",
-          "progress": 0,
           "children": []
         },
         {
           "id": "economic_political_dynamics_2g",
           "title_hi": "आर्थिक–राजनीतिक गतिकी",
           "title_en": "Economic-Political Dynamics",
-          "completed": false,
-          "revision": false,
-          "bookmarked": false,
-          "notes": "",
-          "progress": 0,
           "children": []
         },
         {
           "id": "sports_and_games_2g",
           "title_hi": "खेल एवं क्रीड़ा",
           "title_en": "Sports and Games",
-          "completed": false,
-          "revision": false,
-          "bookmarked": false,
-          "notes": "",
-          "progress": 0,
           "children": []
         },
         {
           "id": "awards_books_authors_2g",
           "title_hi": "पुरस्कार, पुस्तकें एवं लेखक",
           "title_en": "Awards, Books and Authors",
-          "completed": false,
-          "revision": false,
-          "bookmarked": false,
-          "notes": "",
-          "progress": 0,
           "children": []
         }
       ]
@@ -610,73 +345,41 @@
       "id": "gk_world_india_2g",
       "title_hi": "विश्व एवं भारत का सामान्य ज्ञान",
       "title_en": "General Knowledge of World & India",
-      "completed": false,
-      "progress": 0,
       "topics": [
         {
           "id": "world_geography_environment_2g",
           "title_hi": "महाद्वीप, महासागर एवं उनकी विशेषताएं, वैश्विक पवन तंत्र, पर्यावरणीय मुद्दे एवं रणनीतियां, प्रमुख मानवीय व्यवसाय, जनसंख्या वितरण एवं प्रवास",
           "title_en": "Continents, Oceans and their characteristics, Global Wind System, Environmental issues and strategies, Principal Human Occupation, Population distribution and Migration",
-          "completed": false,
-          "revision": false,
-          "bookmarked": false,
-          "notes": "",
-          "progress": 0,
           "children": [
             {
               "id": "continents_oceans_characteristics_2g",
               "title_hi": "महाद्वीप, महासागर एवं उनकी विशेषताएं",
               "title_en": "Continents, Oceans and their characteristics",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             },
             {
               "id": "global_wind_system_2g",
               "title_hi": "वैश्विक पवन तंत्र",
               "title_en": "Global Wind System",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             },
             {
               "id": "environmental_issues_strategies_2g",
               "title_hi": "पर्यावरणीय मुद्दे एवं रणनीतियां",
               "title_en": "Environmental issues and strategies",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             },
             {
               "id": "principal_human_occupation_2g",
               "title_hi": "प्रमुख मानवीय व्यवसाय",
               "title_en": "Principal Human Occupation",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             },
             {
               "id": "population_distribution_migration_2g",
               "title_hi": "जनसंख्या वितरण एवं प्रवास",
               "title_en": "Population distribution and Migration",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             }
           ]
         },
@@ -684,66 +387,36 @@
           "id": "india_geography_2g",
           "title_hi": "भारत: भौतिक स्वरूप, जलवायु तंत्र, अपवाह, प्राकृतिक वनस्पति एवं जैव विविधता, ऊर्जा संसाधन",
           "title_en": "India: Physical features, Climate System, Drainage, Natural Vegetation and Biodiversity, Energy resources",
-          "completed": false,
-          "revision": false,
-          "bookmarked": false,
-          "notes": "",
-          "progress": 0,
           "children": [
             {
               "id": "india_physical_features_2g",
               "title_hi": "भौतिक स्वरूप",
               "title_en": "Physical features",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             },
             {
               "id": "india_climate_system_2g",
               "title_hi": "जलवायु तंत्र",
               "title_en": "Climate System",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             },
             {
               "id": "india_drainage_2g",
               "title_hi": "अपवाह",
               "title_en": "Drainage",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             },
             {
               "id": "india_natural_vegetation_biodiversity_2g",
               "title_hi": "प्राकृतिक वनस्पति एवं जैव विविधता",
               "title_en": "Natural Vegetation and Biodiversity",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             },
             {
               "id": "india_energy_resources_2g",
               "title_hi": "ऊर्जा संसाधन",
               "title_en": "Energy resources",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             }
           ]
         },
@@ -751,33 +424,18 @@
           "id": "indian_economy_2g",
           "title_hi": "भारतीय अर्थव्यवस्था",
           "title_en": "Indian Economy",
-          "completed": false,
-          "revision": false,
-          "bookmarked": false,
-          "notes": "",
-          "progress": 0,
           "children": [
             {
               "id": "growth_development_agri_industry_service_india_2g",
               "title_hi": "भारत में कृषि, उद्योग एवं सेवा क्षेत्र में वृद्धि एवं विकास",
               "title_en": "Growth and Development in Agriculture, Industry and Service Sector in India",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             },
             {
               "id": "foreign_trade_india_trends_composition_direction_2g",
               "title_hi": "भारत का विदेश व्यापार: प्रवृत्तियां, संघटन एवं दिशा",
               "title_en": "Foreign Trade of India: Trends, Composition and Direction",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             }
           ]
         },
@@ -785,66 +443,36 @@
           "id": "constitution_india_foreign_policy_2g",
           "title_hi": "भारत का संविधान एवं विदेश नीति",
           "title_en": "Constitution of India and Foreign Policy",
-          "completed": false,
-          "revision": false,
-          "bookmarked": false,
-          "notes": "",
-          "progress": 0,
           "children": [
             {
               "id": "constitutional_development_constituent_assembly_ambedkar_2g",
               "title_hi": "भारत का संवैधानिक विकास, संविधान सभा एवं डॉ. बी.आर. अम्बेडकर की भूमिका",
               "title_en": "Constitutional Development of India, Constituent Assembly and Role of B.R. Ambedkar",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             },
             {
               "id": "citizenship_fundamental_rights_dpsp_duties_2g",
               "title_hi": "नागरिकता, मौलिक अधिकार, राज्य के नीति निदेशक तत्व, मौलिक कर्तव्य",
               "title_en": "Citizenship, Fundamental Rights, Directive Principles of State Policy, Fundamental Duties",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             },
             {
               "id": "president_vp_pm_council_ministers_2g",
               "title_hi": "राष्ट्रपति, उपराष्ट्रपति, प्रधानमंत्री एवं मंत्रिपरिषद",
               "title_en": "President, Vice-President, Prime Minister and Council of Ministers",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             },
             {
               "id": "parliament_supreme_court_election_commission_2g",
               "title_hi": "संसद, उच्चतम न्यायालय, निर्वाचन आयोग",
               "title_en": "Parliament, Supreme Court, Election Commission",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             },
             {
               "id": "foreign_policy_principles_nehru_relations_issues_2g",
               "title_hi": "भारत की विदेश नीति के सिद्धांत एवं जवाहरलाल नेहरू का योगदान, प्रमुख शक्तियों एवं पड़ोसी देशों के साथ भारत के संबंध, समसामयिक मुद्दे एवं चुनौतियां",
               "title_en": "Principles of India's Foreign Policy and Contribution of Jawahar Lal Nehru, India's Relations with Major Powers and Neighbouring Countries, Contemporary Issues and Challenges",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             }
           ]
         }
@@ -854,106 +482,59 @@
       "id": "educational_psychology_2g",
       "title_hi": "शिक्षा मनोविज्ञान",
       "title_en": "Educational Psychology",
-      "completed": false,
-      "progress": 0,
       "topics": [
         {
           "id": "educational_psychology_nature_scope_implications_2g",
           "title_hi": "शिक्षा मनोविज्ञान – प्रकृति, क्षेत्र एवं प्रभावी शिक्षण के लिए निहितार्थ",
           "title_en": "Educational Psychology – Nature, scope and implications for effective teaching",
-          "completed": false,
-          "revision": false,
-          "bookmarked": false,
-          "notes": "",
-          "progress": 0,
           "children": []
         },
         {
           "id": "holistic_development_learner_2g",
           "title_hi": "शिक्षार्थी का समग्र विकास – विकास की अवधारणा एवं सिद्धांत, संज्ञानात्मक, सामाजिक, नैतिक, संवेगात्मक, भाषायी एवं शारीरिक विकास",
           "title_en": "Holistic Development of Learner – Concept and principles of development, cognitive, social, moral, emotional, linguistic and physical development",
-          "completed": false,
-          "revision": false,
-          "bookmarked": false,
-          "notes": "",
-          "progress": 0,
           "children": [
             {
               "id": "concept_principles_development_2g",
               "title_hi": "विकास की अवधारणा एवं सिद्धांत",
               "title_en": "Concept and principles of development",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             },
             {
               "id": "cognitive_development_2g",
               "title_hi": "संज्ञानात्मक विकास",
               "title_en": "Cognitive development",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             },
             {
               "id": "social_development_2g",
               "title_hi": "सामाजिक विकास",
               "title_en": "Social development",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             },
             {
               "id": "moral_development_2g",
               "title_hi": "नैतिक विकास",
               "title_en": "Moral development",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             },
             {
               "id": "emotional_development_2g",
               "title_hi": "संवेगात्मक विकास",
               "title_en": "Emotional development",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             },
             {
               "id": "linguistic_development_2g",
               "title_hi": "भाषायी विकास",
               "title_en": "Linguistic development",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             },
             {
               "id": "physical_development_2g",
               "title_hi": "शारीरिक विकास",
               "title_en": "Physical development",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             }
           ]
         },
@@ -961,77 +542,42 @@
           "id": "learning_meaning_types_approaches_2g",
           "title_hi": "अधिगम – अर्थ एवं प्रकार, व्यवहारवादी, संज्ञानात्मक, सामाजिक संज्ञानात्मक एवं रचनावादी उपागम, अधिगम को प्रभावित करने वाले कारक एवं शिक्षक के लिए निहितार्थ",
           "title_en": "Learning – Meaning and types, Behavioural, Cognitive, Social cognitive and Constructivist approach to learning, factors affecting learning and implications for a teacher",
-          "completed": false,
-          "revision": false,
-          "bookmarked": false,
-          "notes": "",
-          "progress": 0,
           "children": [
             {
               "id": "learning_meaning_types_2g",
               "title_hi": "अधिगम – अर्थ एवं प्रकार",
               "title_en": "Learning – Meaning and types",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             },
             {
               "id": "behavioural_approach_2g",
               "title_hi": "व्यवहारवादी उपागम",
               "title_en": "Behavioural approach",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             },
             {
               "id": "cognitive_approach_2g",
               "title_hi": "संज्ञानात्मक उपागम",
               "title_en": "Cognitive approach",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             },
             {
               "id": "social_cognitive_approach_2g",
               "title_hi": "सामाजिक संज्ञानात्मक उपागम",
               "title_en": "Social cognitive approach",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             },
             {
               "id": "constructivist_approach_2g",
               "title_hi": "रचनावादी उपागम",
               "title_en": "Constructivist approach",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             },
             {
               "id": "factors_affecting_learning_implications_2g",
               "title_hi": "अधिगम को प्रभावित करने वाले कारक एवं शिक्षक के लिए निहितार्थ",
               "title_en": "Factors affecting learning and implications for a teacher",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             }
           ]
         },
@@ -1039,33 +585,18 @@
           "id": "personality_2g",
           "title_hi": "व्यक्तित्व – अर्थ, सिद्धांत एवं मापन, समायोजन एवं मानसिक स्वास्थ्य",
           "title_en": "Personality – Meaning, theories and measurement, Adjustment and mental health",
-          "completed": false,
-          "revision": false,
-          "bookmarked": false,
-          "notes": "",
-          "progress": 0,
           "children": [
             {
               "id": "personality_meaning_theories_measurement_2g",
               "title_hi": "व्यक्तित्व – अर्थ, सिद्धांत एवं मापन",
               "title_en": "Personality – Meaning, theories and measurement",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             },
             {
               "id": "adjustment_mental_health_2g",
               "title_hi": "समायोजन एवं मानसिक स्वास्थ्य",
               "title_en": "Adjustment and mental health",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             }
           ]
         },
@@ -1073,44 +604,24 @@
           "id": "intelligence_creativity_2g",
           "title_hi": "बुद्धि एवं सृजनात्मकता – अर्थ, सिद्धांत एवं मापन, अधिगम में भूमिका, संवेगात्मक बुद्धि – अवधारणा एवं व्यवहार",
           "title_en": "Intelligence and Creativity – Meaning, theories and measurement, role in learning, Emotional intelligence – concept and practices",
-          "completed": false,
-          "revision": false,
-          "bookmarked": false,
-          "notes": "",
-          "progress": 0,
           "children": [
             {
               "id": "intelligence_creativity_meaning_theories_measurement_2g",
               "title_hi": "बुद्धि एवं सृजनात्मकता – अर्थ, सिद्धांत एवं मापन",
               "title_en": "Intelligence and Creativity – Meaning, theories and measurement",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             },
             {
               "id": "role_in_learning_2g",
               "title_hi": "अधिगम में भूमिका",
               "title_en": "Role in learning",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             },
             {
               "id": "emotional_intelligence_concept_practices_2g",
               "title_hi": "संवेगात्मक बुद्धि – अवधारणा एवं व्यवहार",
               "title_en": "Emotional intelligence – concept and practices",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             }
           ]
         },
@@ -1118,33 +629,18 @@
           "id": "motivation_2g",
           "title_hi": "अभिप्रेरणा – अर्थ एवं प्रकार, अभिप्रेरणा के सिद्धांत एवं शिक्षण–अधिगम के लिए इसके निहितार्थ",
           "title_en": "Motivation – Meaning and types, Theories of motivation and its implications for teaching learning",
-          "completed": false,
-          "revision": false,
-          "bookmarked": false,
-          "notes": "",
-          "progress": 0,
           "children": [
             {
               "id": "motivation_meaning_types_2g",
               "title_hi": "अभिप्रेरणा – अर्थ एवं प्रकार",
               "title_en": "Motivation – Meaning and types",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             },
             {
               "id": "theories_motivation_implications_2g",
               "title_hi": "अभिप्रेरणा के सिद्धांत एवं शिक्षण–अधिगम के लिए इसके निहितार्थ",
               "title_en": "Theories of motivation and its implications for teaching learning",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             }
           ]
         },
@@ -1152,33 +648,18 @@
           "id": "individual_differences_2g",
           "title_hi": "वैयक्तिक भिन्नताएं – अर्थ, स्रोत एवं कक्षा में निहितार्थ, समावेशी शिक्षा",
           "title_en": "Individual Differences – Meaning, sources and class room implications, Inclusive education",
-          "completed": false,
-          "revision": false,
-          "bookmarked": false,
-          "notes": "",
-          "progress": 0,
           "children": [
             {
               "id": "individual_differences_meaning_sources_implications_2g",
               "title_hi": "वैयक्तिक भिन्नताएं – अर्थ, स्रोत एवं कक्षा में निहितार्थ",
               "title_en": "Individual Differences – Meaning, sources and class room implications",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             },
             {
               "id": "inclusive_education_2g",
               "title_hi": "समावेशी शिक्षा",
               "title_en": "Inclusive education",
-              "completed": false,
-              "revision": false,
-              "bookmarked": false,
-              "notes": "",
-              "children": [],
-              "progress": 0
+              "children": []
             }
           ]
         },
@@ -1186,11 +667,6 @@
           "id": "development_21st_century_skills_2g",
           "title_hi": "21वीं सदी के कौशल का विकास: अवधारणा एवं रणनीतियां",
           "title_en": "Development of 21st Century skills: Concept and Strategies",
-          "completed": false,
-          "revision": false,
-          "bookmarked": false,
-          "notes": "",
-          "progress": 0,
           "children": []
         }
       ]
