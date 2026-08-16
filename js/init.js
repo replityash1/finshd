@@ -12,16 +12,19 @@ document.addEventListener('DOMContentLoaded', function() {
   // 2. Load user state from localStorage (instant, synchronous)
   loadFromLocal();
 
-  // 3. Initialize navigation (exam tabs, theme, shortcuts, event listeners)
+  // 3. Build search index for the active exam
+  if (typeof buildSearchIndex === 'function') buildSearchIndex();
+
+  // 4. Initialize navigation (exam tabs, theme, shortcuts, event listeners)
   initNav();
 
-  // 4. Initialize connectivity listeners for sync status
+  // 5. Initialize connectivity listeners for sync status
   initConnectivityListeners();
 
-  // 5. Set up Firebase auth listener
+  // 6. Set up Firebase auth listener
   _initAuth();
 
-  // 6. Render the initial view
+  // 7. Render the initial view
   _renderCurrentView();
 
   console.log('[init] App bootstrapped. Active exam:', appState.activeExamId,
@@ -48,6 +51,7 @@ function _initAuth() {
       console.log('[init] Signed in as:', user.displayName || user.email);
       // Load from Firestore (may overwrite local state)
       loadUserState().then(function() {
+        if (typeof buildSearchIndex === 'function') buildSearchIndex();
         updateAuthUI(user);
         renderExamTabs();
         _renderCurrentView();

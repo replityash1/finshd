@@ -1,5 +1,462 @@
 /**
- * css/study.css — Study view (syllabus tree, search, filters)
- * Subject cards, topic rows, overlap chip, bulk actions.
- * Built in Phase 3.
+ * css/study.css — Study view: syllabus tree, search, filters
+ *
+ * Subject cards collapsed by default with progress rings.
+ * Topic rows are compact single lines with icon-based status.
+ * Accent color as thin left border only, not background fill.
  */
+
+/* ─── Study View Container ───────────────────────────────────────────────── */
+
+.study-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-4);
+  flex-wrap: wrap;
+}
+
+.study-header__title {
+  font-size: var(--size-card-title);
+  font-weight: var(--font-heading);
+}
+
+.study-header__filters {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  flex-wrap: wrap;
+}
+
+/* ─── Filter Chips ───────────────────────────────────────────────────────── */
+
+.filter-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-1);
+  padding: var(--sp-1) var(--sp-3);
+  border-radius: var(--radius-full);
+  font-size: var(--size-caption);
+  font-weight: var(--font-heading);
+  color: var(--text-secondary);
+  background: transparent;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-out);
+  white-space: nowrap;
+}
+
+.filter-chip:hover {
+  color: var(--text-primary);
+  border-color: var(--text-secondary);
+}
+
+.filter-chip--active {
+  color: var(--accent-ras);
+  border-color: var(--accent-ras);
+  background: rgba(124, 109, 240, 0.08);
+}
+
+[data-theme="light"] .filter-chip--active {
+  background: rgba(108, 92, 231, 0.08);
+}
+
+.filter-chip__count {
+  font-size: 10px;
+  opacity: 0.7;
+}
+
+/* ─── Subject Card ───────────────────────────────────────────────────────── */
+
+.subject-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--sp-3);
+  overflow: hidden;
+  transition: border-color var(--duration-fast) var(--ease-out);
+}
+
+.subject-card:hover {
+  border-color: var(--text-secondary);
+}
+
+/* Thin accent left border — 3px, using the exam's accent color */
+.subject-card--accent-ras     { border-left: 3px solid var(--accent-ras); }
+.subject-card--accent-2g-p1   { border-left: 3px solid var(--accent-2g-p1); }
+.subject-card--accent-2g-p2   { border-left: 3px solid var(--accent-2g-p2); }
+
+/* ─── Subject Header (clickable, always visible) ─────────────────────────── */
+
+.subject-header {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  padding: var(--sp-3) var(--sp-4);
+  cursor: pointer;
+  user-select: none;
+  transition: background var(--duration-fast) var(--ease-out);
+  min-height: var(--touch-target);
+}
+
+.subject-header:hover {
+  background: var(--bg-hover);
+}
+
+/* Expand/collapse chevron */
+.subject-header__chevron {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  color: var(--text-secondary);
+  transition: transform var(--duration-norm) var(--ease-out);
+}
+
+.subject-card--expanded .subject-header__chevron {
+  transform: rotate(90deg);
+}
+
+/* Progress ring (SVG circle) */
+.subject-header__ring {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+}
+
+.subject-ring__track {
+  fill: none;
+  stroke: var(--border);
+  stroke-width: 3;
+}
+
+.subject-ring__fill {
+  fill: none;
+  stroke-width: 3;
+  stroke-linecap: round;
+  transition: stroke-dashoffset var(--duration-slow) var(--ease-out);
+}
+
+/* Subject title and stats */
+.subject-header__info {
+  flex: 1;
+  min-width: 0;
+}
+
+.subject-header__title {
+  font-size: var(--size-body);
+  font-weight: var(--font-heading);
+  line-height: 1.3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* Allow wrapping on mobile for long Hindi titles */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.subject-header__meta {
+  font-size: var(--size-caption);
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
+/* Subject percentage */
+.subject-header__pct {
+  flex-shrink: 0;
+  font-size: var(--size-body);
+  font-weight: var(--font-hero);
+  color: var(--text-secondary);
+  min-width: 36px;
+  text-align: right;
+}
+
+/* Subject actions (bulk, context menu) */
+.subject-header__actions {
+  flex-shrink: 0;
+  opacity: 0;
+  transition: opacity var(--duration-fast) var(--ease-out);
+}
+
+.subject-header:hover .subject-header__actions {
+  opacity: 1;
+}
+
+/* Always visible on touch devices */
+@media (hover: none) {
+  .subject-header__actions {
+    opacity: 1;
+  }
+}
+
+.subject-action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  transition: color var(--duration-fast) var(--ease-out),
+              background var(--duration-fast) var(--ease-out);
+}
+
+.subject-action-btn:hover {
+  color: var(--text-primary);
+  background: var(--bg-active);
+}
+
+/* ─── Topic List (inside expanded subject) ───────────────────────────────── */
+
+.subject-topics {
+  display: none;
+  border-top: 1px solid var(--border);
+}
+
+.subject-card--expanded .subject-topics {
+  display: block;
+}
+
+/* ─── Topic Row ──────────────────────────────────────────────────────────── */
+
+.topic-row {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: var(--sp-2) var(--sp-4);
+  padding-left: calc(var(--sp-4) + 16px + var(--sp-3));  /* indent past chevron */
+  min-height: var(--touch-target);
+  border-bottom: 1px solid var(--border);
+  transition: background var(--duration-fast) var(--ease-out);
+}
+
+.topic-row:last-child {
+  border-bottom: none;
+}
+
+.topic-row:hover {
+  background: var(--bg-hover);
+}
+
+.topic-row--focused {
+  background: var(--bg-active);
+  outline: 2px solid var(--border-focus);
+  outline-offset: -2px;
+}
+
+/* Nested children get additional indentation */
+.topic-row--depth-1 { padding-left: calc(var(--sp-4) + 16px + var(--sp-3)); }
+.topic-row--depth-2 { padding-left: calc(var(--sp-4) + 16px + var(--sp-3) + var(--sp-6)); }
+.topic-row--depth-3 { padding-left: calc(var(--sp-4) + 16px + var(--sp-3) + var(--sp-6) * 2); }
+
+/* Parent topic with children — slightly bolder */
+.topic-row--parent {
+  font-weight: var(--font-heading);
+  color: var(--text-secondary);
+  font-size: var(--size-caption);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+/* ─── Topic Status Icon (checkbox-like) ──────────────────────────────────── */
+
+.topic-status {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  border: 2px solid var(--border);
+  color: transparent;
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-out);
+}
+
+.topic-status:hover {
+  border-color: var(--text-secondary);
+}
+
+/* Completed state */
+.topic-status--done {
+  background: var(--success);
+  border-color: var(--success);
+  color: #ffffff;
+}
+
+/* Revision state (completed + flagged for revision) */
+.topic-status--revision {
+  background: var(--warning);
+  border-color: var(--warning);
+  color: #ffffff;
+}
+
+/* Check icon inside */
+.topic-status__icon {
+  width: 14px;
+  height: 14px;
+}
+
+/* ─── Topic Title ────────────────────────────────────────────────────────── */
+
+.topic-title {
+  flex: 1;
+  min-width: 0;
+  font-size: var(--size-body);
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.topic-title--completed {
+  color: var(--text-secondary);
+}
+
+/* ─── Topic Actions (hover/swipe reveal) ─────────────────────────────────── */
+
+.topic-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-1);
+  flex-shrink: 0;
+  opacity: 0;
+  transition: opacity var(--duration-fast) var(--ease-out);
+}
+
+.topic-row:hover .topic-actions {
+  opacity: 1;
+}
+
+/* Always visible on touch devices */
+@media (hover: none) {
+  .topic-actions {
+    opacity: 1;
+  }
+}
+
+.topic-action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  transition: all var(--duration-fast) var(--ease-out);
+}
+
+.topic-action-btn:hover {
+  color: var(--text-primary);
+  background: var(--bg-active);
+}
+
+/* Active states for action buttons */
+.topic-action-btn--revision-active {
+  color: var(--warning);
+}
+
+.topic-action-btn--bookmark-active {
+  color: var(--accent-ras);
+}
+
+.topic-action-btn--has-notes {
+  color: var(--accent-2g-p1);
+}
+
+/* ─── Overlap Badge ──────────────────────────────────────────────────────── */
+
+.overlap-badge {
+  flex-shrink: 0;
+  font-size: 10px;
+  font-weight: var(--font-heading);
+  padding: 1px var(--sp-2);
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+/* ─── Level Badge (Paper II Science) ─────────────────────────────────────── */
+
+.level-badge {
+  flex-shrink: 0;
+  font-size: 9px;
+  font-weight: var(--font-heading);
+  padding: 1px var(--sp-1);
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+}
+
+/* ─── Search Highlight ───────────────────────────────────────────────────── */
+
+.search-highlight {
+  background: rgba(124, 109, 240, 0.2);
+  border-radius: 2px;
+  padding: 0 2px;
+}
+
+[data-theme="light"] .search-highlight {
+  background: rgba(108, 92, 231, 0.15);
+}
+
+/* ─── Empty State ────────────────────────────────────────────────────────── */
+
+.study-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-4);
+  padding: var(--sp-12) var(--sp-4);
+  text-align: center;
+}
+
+.study-empty__icon {
+  color: var(--text-secondary);
+  opacity: 0.4;
+}
+
+.study-empty__text {
+  font-size: var(--size-body);
+  color: var(--text-secondary);
+  max-width: 300px;
+}
+
+/* ─── Bulk Actions Menu ──────────────────────────────────────────────────── */
+
+.bulk-menu {
+  position: absolute;
+  z-index: 200;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-elevated);
+  padding: var(--sp-1);
+  min-width: 200px;
+}
+
+.bulk-menu__item {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: var(--sp-2) var(--sp-3);
+  border-radius: var(--radius-sm);
+  font-size: var(--size-body);
+  color: var(--text-primary);
+  width: 100%;
+  text-align: left;
+  transition: background var(--duration-fast) var(--ease-out);
+}
+
+.bulk-menu__item:hover {
+  background: var(--bg-hover);
+}
+
+.bulk-menu__item--danger {
+  color: var(--danger);
+}
